@@ -1,0 +1,284 @@
+@import "lib/animate/animate.scss";
+@import "config.scss";
+@import "lib/grid/grid.scss";
+@import "lib/bourbon/_bourbon.scss";
+
+
+#wrapper
+{
+    background: $background;
+    background-position:center;
+    background-position: no-repeat;
+    width: 100%;
+    min-height: 100%;
+    height: auto !important;
+    position: relative;
+
+    #container
+    {
+        max-width: 960px;
+        width: 100%;
+        margin: 0 auto;
+
+        .containerDiamonds
+        {
+            width: 600px;
+            margin: 0 auto;
+            height: auto;
+            height: 220px;
+            @include timeAnimationHome(1.0s);
+
+            .first
+            {
+                width: 0;
+                height: 0;
+                border: 190px solid rgba(221, 67, 67, 0.5);
+                border-top-color: #ffffff;
+                @include opacity(0.5);
+                border-bottom: 190px solid transparent;
+                border-left: 190px solid transparent;
+                border-right: 190px solid transparent;
+                margin: 0 auto;
+                position: relative;
+            }
+            .second, .third
+            {
+                width: 0;
+                height: 0;
+                border: 140px solid rgba(221, 67, 67, 0.5);
+                border-top-color: #ffffff;
+                @include opacity(0.5);
+                border-bottom: 140px solid transparent;
+                border-left: 140px solid transparent;
+                border-right: 140px solid transparent;
+                top: 0; 
+                position: absolute;
+            }
+            .third
+            {
+                margin-left: 322px;
+            }
+        }
+
+        .title
+        {
+            text-align: center;
+            color: $colorWhite;
+            font-size: em(120);
+            text-shadow: 0px 1px 0px rgba(0,0,0,0.75);
+            text-transform: uppercase;
+            @include langdon-regular;
+            @include timeAnimationHome(1.1s);
+        }
+        .subtitle
+        {
+            text-align: center;
+            color: $colorWhite;
+            font-size: em(25);
+            text-shadow: 0px 1px 0px rgba(0,0,0,0.75);
+            margin-top: em(-10);
+            text-transform: uppercase;
+            @include langdon-regular;
+            @include timeAnimationHome(1.2s);
+        }
+        .spanSubtitle
+        {
+            margin-top: 88px;
+            text-align: center;
+            color: $colorWhite;
+            font-size: em(30);
+            text-shadow: 0px 2px 0px rgba(0,0,0,0.75);
+            text-transform: uppercase;
+            @include langdon-regular;
+            @include timeAnimationHome(1.3s);
+        }
+
+        ul.countdown
+        {
+            width: 810px;
+            margin: 0 auto;
+            margin-top: 15px;
+            @include timeAnimationHome(1.4s);
+            li
+            {
+                width: 150px;
+                height: 150px;
+                @include borderRadiusPercentage(50%);
+                background-color: $colorCirclesCountdown;
+                margin-left: 70px;
+                float: left;
+                @include opacity($opacityCirclesCountdown);
+
+                &:first-child
+                {
+                    margin-left: 0px;
+                }
+
+                .value
+                {
+                    color: $colorCirclesCountdownTextAndValue;
+                    text-align: center;
+                    margin-top: 23px;
+                    font-size: em(50);
+                    @include raleway-extra-light;
+                }
+                .legendary
+                {
+                    color: $colorCirclesCountdownTextAndValue;
+                    text-align: center;
+                    margin-top: em(2);
+                    font-size: em(16);
+                    @include raleway-extra-bold;
+                }
+            }
+        }
+        .subscribeAndSocial
+        {
+            width: 794px;
+            margin: 0 auto;
+            @include timeAnimationHome(1.5s);
+
+            .newsletter
+            {
+                float: left;
+                margin-top: 105px;
+                width: 340px;
+                margin-bottom: 100px;
+                margin-left: 60px;
+                .title
+                {
+                    color: $colorWhite;
+                    font-size: em(20);
+                    text-shadow: 0px 2px 0px rgba(0,0,0,0.75);
+                    text-transform: uppercase;
+                    text-align: left;
+                    @include langdon-regular;
+
+                    span
+                    {
+                        color: $colorWhite;
+                    }
+                }
+
+                form
+                {
+                    margin-top: 23px;
+                    height: 36px;
+                    border-bottom: 1px solid rgba(237,237,237,1);
+
+                    input[type="text"]
+                    {
+                        background: transparent;
+                        border: 0px;
+                        color: $colorWhite;
+                        font-size: 16px;
+                        margin-top: 8px;
+                        text-shadow: 0px 2px 0px rgba(0,0,0,0.75);
+                        @include raleway-light;
+                        outline: none;
+                    }
+                    input[type="submit"]
+                    {
+                        float: right;
+                        margin-bottom: 2px;
+                        background-color: #ffffff;
+                        padding: 6px;
+                        text-transform: uppercase;
+                        height: 32px;
+                        border-radius: 0px;
+                        border: 0px solid #dd2c2c;
+                        color: $colorWhite;
+                        @include raleway-semi-bold;
+                        outline: none;
+                        font-size: em(14);
+                    }
+                }
+                #notifications
+                {
+                    //text-align: center;
+                    float: left;
+                    position: absolute;
+                    display: none;
+                    margin-top: 10px;
+                    color: $colorWhite;
+                    @include raleway-medium;
+                    font-size: em(16);
+                }
+            }
+
+            .socialNetwork
+            {
+                float: right;
+                margin-top: 105px;
+                width: 310px;
+
+                .title
+                {
+                    color: $colorWhite;
+                    font-size: em(20);
+                    text-shadow: 0px 2px 0px rgba(0,0,0,0.75);
+                    text-transform: uppercase;
+                    text-align: left;
+
+                    span
+                    {
+                        color: $colorWhite;
+                    }
+                }
+
+                ul.social
+                {
+                    float: left;
+                    margin-top: em(20);
+                    li
+                    {
+
+                        float: left;
+                        width: em(30);
+                        height: em(30);
+                        @include borderRadiusPercentage(50%);
+                        border: 2px solid $colorWhite;
+                        background-color: $colorSocialBackground;
+                        cursor: pointer;
+                        margin-left: em(14);
+                        
+                        span
+                        {
+                            position: absolute;
+                            padding: 4px 4px;
+                            font-size: em(16);
+                            color: $colorWhite;
+                        }
+                        &:first-child
+                        {
+                            margin-left: 0px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    footer
+    {
+        width: 100%;
+        height: em(29);
+        background-color: rgba(0,0,0,0.2);
+        clear: both;
+        float: left;
+        bottom: 0;
+        position: absolute;
+        text-align: center;
+        padding-top: 11px;
+        letter-spacing: em(1);
+        color: $colorWhite;
+        @include raleway-medium;
+        font-size: em(14);
+        @include timeAnimationHome(1.6s);
+        span
+        {
+            color: $colorCopyrightSpan;
+        }
+    }
+}
+
+@import "media-queries.scss";

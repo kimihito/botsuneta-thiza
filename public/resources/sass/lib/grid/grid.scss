@@ -1,0 +1,80 @@
+/*--------------------------------------------------------------------
+GRID CALCULATOR
+
+Version: 	1.0 - 2013
+author: 	Load Interactive (João Dias)
+email: 		joao.dias@load-interactive.com
+website: 	http://www.load-interactive.com
+
+How to use: 1- Import this library into your project
+			2- If you'd like, define the column and gutter width, as well as the total number of columns
+			3- Use @include column(NUMBER-OF-COLUMNS-TO-APPLY ) to set the total of columns that your DOM elements will use.
+			Extra - Use @include pull or @include push to push or pull the content (by adding offset columns)
+			
+-----------------------------------------------------------------------*/
+
+// Defaults settings for a 12 column grid layout
+$column-width: 67;
+$gutter-width: 15;
+$columns: 12;
+
+// Total width of the grid system
+// no need to modify this
+$gridsystem-width: ($column-width*$columns) + ($gutter-width*$columns) * 1;
+
+// Set $total-width to 100% for a fluid layout
+$total-width: $gridsystem-width;
+
+// Uncomment these two lines and the star width/margin lines below to enable sub-pixel fix for IE6 & 7.
+//$min-width: 960;
+//$correction: 0.5 / $min-width * 100 * 1%;
+
+// The micro
+@mixin clearfix 
+{
+	*zoom:1;
+	
+	&:before,
+	&:after {
+	    content:"";
+	    display:table;
+	}
+	&:after {
+	    clear:both;
+	}
+}
+
+
+/**
+ * Le Grid
+ */
+body {
+	width: 100%;
+	@include clearfix;
+}
+
+@mixin row($columns:$columns) {
+	display: block;
+	width: $total-width * (($gutter-width + $gridsystem-width)/$gridsystem-width);
+	margin: 0 $total-width*((($gutter-width*.5)/$gridsystem-width)*-1);
+	// *width: $total-width*(($gutter-width + $gridsystem-width)/$gridsystem-width)-$correction;
+	// *margin: 0 $total-width*((($gutter-width*.5)/$gridsystem-width)*-1)-$correction;
+	@include clearfix;
+}
+
+@mixin column($x,$columns:$columns) {
+	//display: inline;
+	//float: left;
+	width: percentage(((($gutter-width+$column-width)*$x)-$gutter-width) / $gridsystem-width);
+	//margin: 0 ($total-width*(($gutter-width*.5)/$gridsystem-width));
+	// *width: $total-width*(((($gutter-width+$column-width)*$x)-$gutter-width) / $gridsystem-width)-$correction;
+	// *margin: 0 $total-width*(($gutter-width*.5)/$gridsystem-width)-$correction;
+}
+
+@mixin push($offset:1) {
+	margin-left: $total-width*((($gutter-width+$column-width)*$offset) / $gridsystem-width) + $total-width*(($gutter-width*.5)/$gridsystem-width);
+}
+
+@mixin pull($offset:1) {
+	margin-right: $total-width*((($gutter-width+$column-width)*$offset) / $gridsystem-width) + $total-width*(($gutter-width*.5)/$gridsystem-width);
+}

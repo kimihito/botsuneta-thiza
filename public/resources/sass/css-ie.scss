@@ -1,0 +1,74 @@
+
+#wrapper
+{
+    #container
+    {
+        .containerDiamonds
+        {
+            background: url('../images/img_web_background_desktop.png');
+            height: 80px;
+        }
+    }
+}
+
+
+@media screen and (max-height:900px) 
+{
+
+#wrapper
+{
+    #container
+    {
+        .containerDiamonds
+        {
+            background: url('../images/img_web_background_mobile.png');
+            height: 80px;
+        }
+    }
+}
+}
+
+@media screen and (max-width: 1024px)
+{
+#wrapper
+{
+    #container
+    {
+        .containerDiamonds
+        {
+            background: url('../images/img_web_background_mobile.png');
+            height: 80px;
+        }
+    }
+}
+}
+
+@media screen and (max-width: 768px)
+{
+    #wrapper
+    {
+        #container
+        {
+            .containerDiamonds
+            {
+                background: url('../images/img_web_background_mobile.png');
+                height: 80px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 720px)
+{
+    #wrapper
+    {
+        #container
+        {
+            .containerDiamonds
+            {
+                background: url('../images/img_web_background_mobile.png');
+                height: 80px;
+            }
+        }
+    }
+}

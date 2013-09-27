@@ -1,0 +1,34 @@
+{
+    "container": 
+    {
+        "keywords" : "coming soon, launching, load, countdown",
+        "description" : "We are working on our website. Please stay tunned.",
+        "url" : "http://www.load-interactive.com/index.html",
+        "author":"Load Interactive",
+        "title" : "we are awesome",
+        "subTitle" : "but we are still working on our website",
+        "subTitleSpan" : "we are launching in:",
+        "days" : "2013/9/28",
+        "hours" : "9",
+        "minutes" : "29",
+        "seconds" : "40",
+        "newsletterTitle":"subscribe",
+        "newsletterTitleSpan":" our newsletter",
+        "socialNetworksTitle": "follow us",
+        "socialNetworksTitleSpan": " on social",
+        "formPlaceholder": "INSERT YOUR EMAIL",
+        "formButton": "subscribe",
+        "notificationSuccess": "Thank you for subscribing.",
+        "notificationError" : "Something went wrong. Try again later.",
+        "notificationInvalidEmail":"Something went wrong. Try again later.",
+        "footer": "&copy; Copyright 2013 Yoursite",
+        "footerSpan": " by Design Company",
+        "linkFacebook": "http://themeforest.net?ref=LOAD",
+        "linkTwitter": "http://themeforest.net?ref=LOAD",
+        "linkGplus": "http://themeforest.net?ref=LOAD",
+        "linkDribbble": "http://themeforest.net?ref=LOAD",
+        "linkFlickr": "http://themeforest.net?ref=LOAD",
+        "color": "dd4343",
+        "date" : "09/13/2014 11:00 PM"
+    }
+}

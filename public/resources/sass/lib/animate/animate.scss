@@ -1,0 +1,361 @@
+/*--------------------------------------------------------------------
+ANIMATE
+
+version:   1.0 - 2013
+author:    Load Interactive (João Dias)
+email:     joao.dias$load-interactive.com
+website:   http://www.load-interactive.com
+state:      production
+description: Library of CSS3 Animations for use on web and mobile apps.
+
+How to use: 1- Import this animate.scss file to your styles file.
+      2- Comment the first and third lines of each function to unlock it. Like this
+
+      Before:
+
+        .fadeInDown(){
+          @import "source/fadeInDown.scss";
+        }
+
+      After:
+
+        //.fadeInDown(){
+          @import "source/fadeInDown.scss";
+        //};
+
+      3- Add the animated and fadeInDown classes to your HTML either directly or by Javascript.
+
+Note: Do not comment the $import line, otherwise it won't work.
+      If you would like to change the duration of your animations individually, don't enter the animated class and create one for yourself instead.
+-----------------------------------------------------------------------*/
+
+$duration: 500ms;
+
+body {
+  -webkit-backface-visibility: hidden; //fix bug text rendering in chrome while animating
+}
+
+.animated {
+  -webkit-animation-duration: $duration;
+     -moz-animation-duration: $duration;
+       -o-animation-duration: $duration;
+          animation-duration: $duration;
+  -webkit-animation-fill-mode: both;
+     -moz-animation-fill-mode: both;
+       -o-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+
+ 
+
+/**
+ * Attention Seekers
+ */
+@import "source/flash.scss";
+@import "source/shake.scss";
+@import "source/bounce.scss";
+@import "source/tada.scss";
+@import "source/swing.scss";
+@import "source/wobble.scss";
+@import "source/pulse.scss";
+@import "source/wiggle.scss";
+
+@include flash;
+
+
+/**
+ * Flippers
+ * Current only Webkit,Firefox and IE 10
+ */
+
+@import "source/flip.scss";
+@import "source/tada.scss";
+@import "source/flipInX.scss";
+@import "source/flipOutX.scss";
+
+//CONTINUA A PARTIR DAQUI
+@import "source/flipInY.scss";
+@import "source/flipOutY.scss";
+
+
+/**
+ * Fade In Entrances
+ */
+@import "source/fadeIn.scss";
+@import "source/fadeInUp.scss";
+@import "source/fadeInDown.scss";
+@import "source/fadeInLeft.scss";
+@import "source/fadeInRight.scss";
+@import "source/fadeInUpBig.scss";
+@import "source/fadeInDownBig.scss";
+@import "source/fadeInLeftBig.scss";
+@import "source/fadeInRightBig.scss";
+
+@include fadeIn;
+
+@include fadeInDown;
+
+/**
+ * Fade Out Exits
+ */
+@import "source/fadeOut.scss";
+@include fadeOut;
+@import "source/fadeOutUp.scss";
+@import "source/fadeOutDown.scss";
+@import "source/fadeOutLeft.scss";
+@import "source/fadeOutRight.scss";
+@import "source/fadeOutUpBig.scss";
+@import "source/fadeOutDownBig.scss";
+@import "source/fadeOutLeftBig.scss";
+@import "source/fadeOutRightBig.scss";
+
+
+/**
+ * Bouncing Entrances
+ */
+@import "source/bounceIn.scss";
+@import "source/bounceInUp.scss";
+@import "source/bounceInDown.scss";
+@import "source/bounceInLeft.scss";
+@import "source/bounceInRight.scss";
+
+
+/**
+ * Bouncing Exits
+ */
+@import "source/bounceOut.scss";
+@import "source/bounceOutUp.scss";
+@import "source/bounceOutDown.scss";
+@import "source/bounceOutLeft.scss";
+@import "source/bounceOutRight.scss";
+
+
+/**
+ * Rotating Entrances
+ */
+@import "source/rotateIn.scss";
+@import "source/rotateInUpLeft.scss";
+@import "source/rotateInDownLeft.scss";
+@import "source/rotateInUpRight.scss";
+@import "source/rotateInDownRight.scss";
+
+
+/**
+ * Rotating Exits
+ */
+@import "source/rotateOut.scss";
+@import "source/rotateOutUpLeft.scss";
+@import "source/rotateOutDownLeft.scss";
+@import "source/rotateOutUpRight.scss";
+@import "source/rotateOutDownRight.scss";
+
+
+/**
+ * Light Speed
+ */
+@import "source/lightSpeedIn.scss";
+@import "source/lightSpeedOut.scss";
+
+@include lightSpeedOut;
+
+
+/**
+ * Specials
+ */
+@import "source/hinge.scss";
+@import "source/rollIn.scss";
+@import "source/rollOut.scss";
+
+
+@-moz-keyframes scale-one
+{
+  0%
+  {
+    -moz-transform: scale(0);
+    opacity: 0;
+  }
+  20%{
+    -moz-transform: scale(1);
+    opacity: 1;
+  }
+  80%
+  {
+    -moz-transform: scale(1);
+    opacity: 1;
+  }
+  90%{
+    -moz-transform: scale(0);
+    opacity: 0;
+  }
+  100%
+  {
+    -moz-transform: scale(0);
+    opacity: 0;
+  }
+}
+   
+@-webkit-keyframes scale-one
+{
+
+  0%
+  {
+    -webkit-transform: scale(0);
+    opacity: 0;
+  }
+  20%{
+    -webkit-transform: scale(1);
+    opacity: 1;
+  }
+  80%
+  {
+    -webkit-transform: scale(1);
+    opacity: 1;
+  }
+  90%{
+    -webkit-transform: scale(0);
+    opacity: 0;
+  }
+  100%
+  {
+    -webkit-transform: scale(0);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes scale-two
+{
+  0%
+  {
+    -webkit-transform: scale(0);
+    opacity: 0;
+  }
+  20%
+  {
+    -webkit-transform: scale(0);
+    opacity: 0;
+  }
+  40%
+  {
+    -webkit-transform: scale(1);
+    opacity: 1;
+  }
+  80%
+  {
+    -webkit-transform: scale(1);
+    opacity: 1;
+  }
+  90%
+  {
+    -webkit-transform: scale(0);
+    opacity: 0;
+  }
+  100%
+  {
+    -webkit-transform: scale(0);
+    opacity: 0;
+  }
+}
+
+
+@-moz-keyframes scale-two
+{
+  0%
+  {
+    -moz-transform: scale(0);
+    opacity: 0;
+  }
+  20%
+  {
+    -moz-transform: scale(0);
+    opacity: 0;
+  }
+  40%
+  {
+    -moz-transform: scale(1);
+    opacity: 1;
+  }
+  80%
+  {
+    -moz-transform: scale(1);
+    opacity: 1;
+  }
+  90%
+  {
+    -moz-transform: scale(0);
+    opacity: 0;
+  }
+  100%
+  {
+    -moz-transform: scale(0);
+    opacity: 0;
+  }
+}
+    
+@-webkit-keyframes scale-three
+{
+  0%
+  {
+    -webkit-transform: scale(0);
+    opacity: 0;
+  }
+  40%
+  {
+    -webkit-transform: scale(0);
+    opacity: 0;
+  }
+  60%
+  {
+    -webkit-transform: scale(1);
+    opacity: 1;
+  }
+  80%
+  {
+    -webkit-transform: scale(1);
+    opacity: 1;
+  }
+  90%
+  {
+    -webkit-transform: scale(0);
+    opacity: 0;
+  }
+  100%
+  {
+    -webkit-transform: scale(0);
+    opacity: 0;
+  }
+}
+
+   
+@-moz-keyframes scale-three
+{
+  0%
+  {
+    -moz-transform: scale(0);
+    opacity: 0;
+  }
+  40%
+  {
+    -moz-transform: scale(0);
+    opacity: 0;
+  }
+  60%
+  {
+    -moz-transform: scale(1);
+    opacity: 1;
+  }
+  80%
+  {
+    -moz-transform: scale(1);
+    opacity: 1;
+  }
+  90%
+  {
+    -moz-transform: scale(0);
+    opacity: 0;
+  }
+  100%
+  {
+    -moz-transform: scale(0);
+    opacity: 0;
+  }
+}

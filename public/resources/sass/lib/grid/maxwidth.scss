@@ -1,0 +1,14 @@
+@import "grid.scss";
+
+
+//////////
+// GRELHA com Máximo de comprimento //
+//////////
+
+// Número de colunas, gutter e comprimento de cada uma
+$columns: 12;
+$column-width: 78;
+$gutter-width: 24;
+
+// Se quiseres pixels ao invés de percentagens, comenta a linha abaixo
+$total-width: 100%;
