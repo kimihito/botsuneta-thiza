@@ -3362,7 +3362,7 @@ body:after {
 }
 
 #wrapper {
-  background: url("http://placehold.it/1920x1080");
+  background: url("/resources/images/1920x1080.jpg");
   background-position: center;
   background-position: no-repeat;
   width: 100%;
@@ -3679,12 +3679,12 @@ body:after {
 
 @media only screen and (max-device-width: 1024px) and (orientation: landscape) {
   #wrapper {
-    background: url("http://placehold.it/1024x768");
+    background: url("/resources/images/1024x768.jpg");
   }
 }
 @media only screen and (max-device-width: 768px) and (orientation: portrait) {
   #wrapper {
-    background: url("http://placehold.it/768x1024");
+    background: url("/resources/images/768x1024.jpg");
   }
 }
 @media screen and (max-height: 900px) {
@@ -3791,7 +3791,7 @@ body:after {
 }
 @media screen and (max-width: 1024px) {
   #wrapper {
-    background: url("http://placehold.it/1024x768");
+    background: url("/resources/images/1024x768.jpg");
   }
   #wrapper #container .containerDiamonds {
     width: 254px;
@@ -3914,7 +3914,7 @@ body:after {
 }
 @media screen and (max-width: 768px) {
   #wrapper {
-    background: url("http://placehold.it/768x1024");
+    background: url("/resources/images/768x1024.jpg");
   }
   #wrapper #container {
     max-width: 705px;
